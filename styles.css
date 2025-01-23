@@ -1,0 +1,115 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Linear Gradient */
+    color: #fff;
+}
+
+.game-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for container */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    font-size: 36px;
+    background-color: #f1f1f1;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+.status {
+    margin-top: 20px;
+}
+
+#status-message {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Result Screen Styles */
+.result-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-message {
+    text-align: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#result-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#new-game-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#new-game-btn:hover {
+    background-color: #6a11cb;
+}
+
+@media (max-width: 500px) {
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+    }
+}
